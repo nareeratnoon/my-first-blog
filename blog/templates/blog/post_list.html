@@ -5,18 +5,12 @@
 
 <body>
     <h1>Noon's Blog</h1>
+    {% for post in posts%}
     <div>
-            <h2>Who Am I?</h2>
-            <p>Published: 24 March 2018</p>
-            <p>Hi guys! You can call me Noon for short.</p>
-            <p>I'm working at Agoda as Junior Data Analyst in Marketing Team.</p>
+            <h2>{{post.title}}</h2>
+            <p>Published: {{post.published_dat}}</p>
+            <p>{{post.text|linebreaksbr}}</p>
     </div>
-    <br>
-    <div>
-            <h2>Where Am I?</h2>
-            <p>Published: 24 March 2018</p>
-            <p>While I write this blog, I'm at Django girls event, which is one of the coolest events I have ever joined!</p>
-            <p>My coach is P'Kelvin</p>
-    </div>
+    {% endfor%}
 </body>
 </html>
